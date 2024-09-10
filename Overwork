@@ -1,0 +1,10 @@
+OverHours = 0
+OverRates = 0 
+Hours = int(input('Enter Hours:'))
+Rate = int(input('Enter Rate: '))
+if Hours > 40:
+    OverHours = Hours-40
+    OverRates = Rate*1.5
+    print(f'Pay: {(OverHours * OverRates) + (40 * Rate):.2f}')
+else:
+    print(f'Pay: {(Hours * Rate):.2f}')
