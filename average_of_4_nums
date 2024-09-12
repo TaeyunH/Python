@@ -1,0 +1,15 @@
+import math
+
+num1 = float(input())
+num2 = float(input())
+num3 = float(input())
+num4 = float(input())
+total = num1 * num2 * num3 * num4
+total_sum = (num1 + num2 + num3 + num4)
+total_round = round(total)
+if total_sum > 1 and total > 1:
+    print(f"{total_round} {int(total_sum / 4)}")
+    print(f"{round(total,3):.3f} {round((total_sum / 4),3)}")
+else:
+    print(f"{total_round} {int(round(total_sum / 4))}")
+    print(f"{round(total,3):.3f} {round(total_sum/4,3):.3f}")
