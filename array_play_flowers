@@ -1,0 +1,38 @@
+my_flower1 = 'rose'
+my_flower2 = 'peony'
+my_flower3 = 'lily'
+
+your_flower1 = 'rose'
+your_flower2 = 'daisy'
+
+their_flower = 'aster'
+
+ourlist = [my_flower1,my_flower2,my_flower3,your_flower1,your_flower2,their_flower]
+print(ourlist)
+
+ourlist.pop(1)
+print(ourlist)
+
+ourlist.remove(my_flower1)
+print(ourlist)
+
+ourlist.pop(3)
+print(ourlist)
+
+ourlist.extend(ourlist)
+print(ourlist)
+
+ourlist.append(your_flower1)
+print(ourlist)
+
+ourlist[1] = your_flower2
+print(ourlist)
+
+ourlist.remove(your_flower2)
+print(ourlist)
+
+ourlist.remove(your_flower2)
+print(ourlist)
+
+ourlist.remove(your_flower2)
+print(ourlist)
