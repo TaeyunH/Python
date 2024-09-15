@@ -1,0 +1,8 @@
+def get_height():
+    while True:
+        try:
+            height = int(input("Enter your height in cm "))
+            print(f"Your heihgt is {height}cm.")
+            break
+        except ValueError:
+            print("Wrong input enter a numerical value")
