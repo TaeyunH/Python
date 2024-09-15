@@ -1,0 +1,11 @@
+def function_byte_to_other(byte,wanted_size):
+    if wanted_size == 'KB' or wanted_size == 'kb':
+        ans = byte/1000
+    elif wanted_size == 'MB' or wanted_size == 'mb':
+        ans = byte/1000000
+    elif wanted_size == 'GB' or wanted_size == 'gb':
+        ans = byte/1000000000
+    else:
+        print('Only KB, kb, MB, mb, GB, or gb are supported')
+        return None
+    return ans
