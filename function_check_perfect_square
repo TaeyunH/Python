@@ -1,0 +1,15 @@
+#reference https://www.jobtestprep.com/amazon-online-assessment
+import math
+
+def check_perfect_square(x):
+    try:
+        test = math.sqrt(x)
+        if int(test) == test:
+            print('Perfect sqaure')
+        else:
+            print('NOPE')
+    except: 
+        print('It is not working')
+
+x = 16  
+check_perfect_square(16)
