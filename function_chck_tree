@@ -1,0 +1,25 @@
+#reference https://www.jobtestprep.com/amazon-online-assessment
+def check_tree(tree1,tree2):
+        try:
+            if tree1 == tree2:
+                print('Yes')
+            else:  
+                print('No')
+        except ValueError:
+            print("Error: Input is not valid.")
+
+tree1 = [1, 2, 3]
+tree2 = [1, 2, 3]
+check_tree(tree1, tree2) 
+
+tree1 = [1, 2]
+tree2 = [1, 2, 3]
+check_tree(tree1, tree2) 
+
+tree1 = []
+tree2 = []
+check_tree(tree1, tree2)  
+
+tree1 = []
+tree2 = [1, 2, 3]
+check_tree(tree1, tree2)  
