@@ -1,0 +1,20 @@
+def computepay():
+
+    for name in ("James","Judy","John"):
+            try:
+                Hours = float(input(f'{name}, Enter Hours:'))
+                Rate = float(input(f'{name}, Enter Rate:'))  
+                if Hours < 40:
+                    Pay = format(Hours * Rate,".2f")
+                    print(f'Your pay is {Pay}')
+                else: 
+                    Pay = format(((Hours - 40) * (1.5 * Rate)) + (40 * Rate),".2f")
+                    
+                    print(f'{name}, Your pay is {Pay}')
+            except ValueError:
+                print('What did you enter...?')
+                break
+    return Pay
+
+
+computepay()
