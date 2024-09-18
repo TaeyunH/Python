@@ -1,0 +1,5 @@
+name = input('')
+first_name_initial = name[0]
+space = name.index(' ')
+last_name_initial = name[space+1]
+print(first_name_initial,last_name_initial)
