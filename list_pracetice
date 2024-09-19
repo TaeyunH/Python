@@ -1,0 +1,7 @@
+countries_list = [input(), input(), input()]
+
+len_var = len(countries_list)
+index_var = countries_list.index("Egypt")
+
+print(f'Egypt is found at index {index_var} of {countries_list}')
+print(f'List length: {len_var}')
