@@ -1,0 +1,9 @@
+from collections import namedtuple
+
+Person = namedtuple('Person', ['first_name', 'last_name', 'state', 'age'])
+
+person_info = Person(input(), input(), input(), int(input()))
+print(f"First name: {person_info.first_name}")
+print(f"Last name: {person_info.last_name}")
+print(f"State: {person_info.state}")
+print(f"Age: {person_info.age}")
