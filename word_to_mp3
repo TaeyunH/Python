@@ -1,0 +1,26 @@
+import pyttsx3
+from docx import Document
+
+# Word 문서에서 텍스트를 읽어오는 함수
+def read_docx(file_path):
+    doc = Document(file_path)
+    full_text = []
+    for para in doc.paragraphs:
+        full_text.append(para.text)
+    return '\n'.join(full_text)
+
+# 텍스트를 음성으로 변환하고 mp3 파일로 저장하는 함수
+def text_to_speech(text, output_file):
+    engine = pyttsx3.init()
+    engine.save_to_file(text, output_file)
+    engine.runAndWait()
+
+# Word 문서 경로와 출력할 mp3 파일 경로 설정
+#word_file = 'file location'  
+#mp3_file = 'where to save mp3'  
+
+# 문서의 텍스트를 읽고 음성 파일로 저장
+document_text = read_docx(word_file)
+text_to_speech(document_text, mp3_file)
+
+print(f'음성 파일이 {mp3_file}로 저장되었습니다.')
