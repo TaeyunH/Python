@@ -15,3 +15,73 @@ data_head = data.head()
 
 data_info, data_head
 ----------------------------------------------------------------------------------
+# Re-import necessary libraries and reload the data due to environment reset
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the CSV file again
+file_path = 'C:/Users/Taeyun/AI Course/OAW2409.csv'
+data = pd.read_csv(file_path)
+
+# Plot the TMIN column to visualize the minimum temperatures
+plt.figure(figsize=(10, 6))
+plt.plot(data['TMIN'], label='TMIN')
+plt.title('Minimum Daily Temperatures Over Time')
+plt.xlabel('Record Index')
+plt.ylabel('TMIN (°F)')
+plt.legend()
+plt.grid(True)
+plt.show()
+----------------------------------------------------------------------------------
+# Re-import necessary libraries and reload the data due to environment reset
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the CSV file again
+file_path = 'C:/Users/Taeyun/AI Course/OAW2409.csv'
+data = pd.read_csv(file_path)
+
+# Continue with your analysis or plotting
+# For example, to calculate temperature difference and plot the yearly average:
+data['TempDiff'] = data['TMAX'] - data['TMIN']
+
+# Group the data by year and calculate the average temperature difference per year
+yearly_avg_temp_diff = data.groupby('yr')['TempDiff'].mean()
+
+# Plot the average temperature difference per year
+plt.figure(figsize=(12, 6))
+plt.plot(yearly_avg_temp_diff.index, yearly_avg_temp_diff.values, label='Yearly Average Temperature Difference', color='orange', linewidth=1.5)
+
+plt.title('Yearly Average Temperature Difference Over Time')
+plt.xlabel('Year')
+plt.ylabel('Average Temperature Difference (°F)')
+plt.legend()
+plt.grid(True)
+plt.show()
+----------------------------------------------------------------------------------
+# Re-import necessary libraries and reload the data due to environment reset
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the CSV file again
+file_path = 'C:/Users/Taeyun/AI Course/OAW2409.csv'
+data = pd.read_csv(file_path)
+
+# Convert the DATE column to a datetime format
+data['DATE'] = pd.to_datetime(data['DATE'])
+
+# Group the data by year and calculate the peak (maximum) TMAX and TMIN per year
+yearly_peak_tmax = data.groupby('yr')['TMAX'].max()
+yearly_peak_tmin = data.groupby('yr')['TMIN'].min()
+
+# Plot the peak TMAX and TMIN per year
+plt.figure(figsize=(12, 6))
+plt.plot(yearly_peak_tmax.index, yearly_peak_tmax.values, label='Yearly Peak Max Temperature (TMAX)', color='red', linewidth=1.5)
+plt.plot(yearly_peak_tmin.index, yearly_peak_tmin.values, label='Yearly Peak Min Temperature (TMIN)', color='blue', linewidth=1.5)
+
+plt.title('Yearly Peak Max and Min Temperatures Over Time')
+plt.xlabel('Year')
+plt.ylabel('Temperature (°F)')
+plt.legend()
+plt.grid(True)
+plt.show()
