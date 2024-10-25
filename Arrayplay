@@ -1,0 +1,21 @@
+Test = [1, 101, 99, 50, 23, 5, 10, 50]
+
+placeholder = len(Test)
+dp = [0] * placeholder
+print(dp)
+
+
+
+# 초기값 설정
+dp[0] = Test[0]
+dp[1] = max(Test[0], Test[1])
+print(dp)
+
+for i in range (2,placeholder):
+    dp[i] = max(dp[i-1],Test[i]+dp[i-2])
+    print(dp)
+#print(max(dp[2-1],Test[2]+dp[2-2]))
+print(dp[2-1])
+print(Test[2])
+print(dp[2-2])
+print(Test[2]+dp[2-2])
