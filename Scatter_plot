@@ -1,0 +1,9 @@
+# Import package
+import matplotlib.pyplot as plt
+
+# Build Scatter plot
+plt.scatter(pop, life_exp)
+plt.xscale('log')
+
+# Show plot
+plt.show()
